@@ -27,4 +27,12 @@ class TermController extends Controller
 
         return response()->json(['result'=>'sucess']);
     }
+
+    public function table()
+    {
+        $terms = Term::all();
+        return view('terms',[
+            'terms' => $terms
+        ]);
+    }
 }
